@@ -1,0 +1,38 @@
+{% extends 'adminhome.html' %}
+
+
+{% block sectioncontent %}
+<center>
+<h1> Manage Posts Here</h1>
+
+<table class="table table-bordered">
+<tr>
+<th>Enrollment Number</th>
+<th>PostId</th>
+<th>Title</th>
+<th>Category</th>
+<th>Publish Date</th>
+<th>Status</th>
+<th>Action</th>
+</tr>
+
+{% for row in userDetails %}
+<tr>
+<td>{{row.enrollmentnumber}}</td>
+<td>{{row.postid}}</td>
+<td>{{row.category}}</td>
+<td>{{row.dt}}</td>
+<td>
+{% if row.status %}
+<a href="{{myadmin_curl}}managepoststatus/?s=unverify&rid={{row.regid}}"  style="color:red;">Un-verify Post</a>
+{% else %}
+<a href="{{myadmin_curl}}managepoststatus/?s=verify&rid={{row.regid}}"  style="color:green;">Verify Post</a>
+{% endif %}
+</td>
+<td><a href="{{myadmin_curl}}managepoststatus/?s=delete&rid={{row.regid}}"  style="color:orange;">Delete Post</a></td>
+</tr>
+{% endfor %}
+</table>
+
+</center>
+{% endblock %}

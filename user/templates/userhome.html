@@ -1,0 +1,153 @@
+{% extends 'base.html' %}
+
+
+{% block nav %}
+<nav class="header__nav-wrap">
+
+		<ul class="header__nav">
+				<li class="current"><a href="{{user_curl}}" title="">Home</a></li>
+				<li class="has-children">
+					<!--	<a href="#0" title="">Categories</a>
+						<ul class="sub-menu">
+						<li><a href="category.html">Lifestyle</a></li>
+						<li><a href="category.html">Health</a></li>
+						<li><a href="category.html">Family</a></li>
+						<li><a href="category.html">Management</a></li>
+						<li><a href="category.html">Travel</a></li>
+						<li><a href="category.html">Work</a></li>
+						</ul>
+				</li>
+				<li class="has-children">
+						<a href="#0" title="">Blog Posts</a>
+						<ul class="sub-menu">
+						<li><a href="single-video.html">Video Post</a></li>
+						<li><a href="single-audio.html">Audio Post</a></li>
+						<li><a href="single-gallery.html">Gallery Post</a></li>
+						<li><a href="single-standard.html">Standard Post</a></li>
+						</ul>
+				</li> -->
+				<li><a href={{user_curl}}addpost/ title="">Addpost</a></li>
+				<li><a href={{user_curl}}viewpost/ title="">View Posts</a></li>
+				<li><a href={{user_curl}}viewdeeppost/ title="">View Deep Posts</a></li>
+			<!--	<li><a href="page-about.html" title="">About</a></li>
+				<li><a href="page-contact.html" title="">Contact</a></li>
+				<li><a href="{{curl}}register/">Register </a></li>-->
+				<li><a href="{{curl}}login/">Logout </a></li>
+		</ul>  end header__nav
+
+		<ul class="header__social">
+				<li class="ss-facebook">
+						<a href="https://facebook.com/">
+								<span class="screen-reader-text">Facebook</span>
+						</a>
+				</li>
+				<li class="ss-twitter">
+						<a href="#0">
+								<span class="screen-reader-text">Twitter</span>
+						</a>
+				</li>
+				<li class="ss-dribbble">
+						<a href="#0">
+								<span class="screen-reader-text">Dribbble</span>
+						</a>
+				</li>
+				<li class="ss-pinterest">
+						<a href="#0">
+								<span class="screen-reader-text">Behance</span>
+						</a>
+				</li>
+		</ul>
+
+</nav>
+{% endblock %}
+{% block sectioncontent %}
+
+ <!-- <h1>Welcome to User Panel</h1>
+<style>
+body {
+  font-family: Arial;
+  padding: 20px;
+  background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: white;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+  float: left;
+  width: 75%;
+}
+
+
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+<!--<div class="header">
+ <h2>Blog Name</h2>
+</div>
+<table>
+<form method="post" action={{user_curl}} >
+<div class="row">
+ <div class="leftcolumn">
+   <div class="card">
+     <h3>Please select Category</h3>
+     <select name="category">
+     <option>Select Category</option>
+     <option>Technical Internship</option>
+     <option>Cultural Internship</option>
+     <option>Enterprenuership Ideas</option>
+     <option>Placement related..</option>
+     <option>General </option>
+     </select>
+
+     <h2>Would you like to add your category Description</h2>
+
+     <textarea name="description" rows="4" cols="20 placeholder="add here""> </textarea>
+
+
+<h4>Add your Post here</h4>
+
+
+
+
+   <textarea name="description" rows="8" cols="80 placeholder="add here""> </textarea>
+
+
+
+
+</div>
+<div class="card">
+
+
+  <input type="submit"  value="AddPost" width="30%" />
+</div>
+</form>
+</table> -->
+
+{% endblock %}
+{% block sidesection %}
+<h5>under construction</h5>
+{% endblock %}
+{% block number %}
+{% endblock  %}
+{% block footer %}
+{% endblock %}

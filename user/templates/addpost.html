@@ -1,0 +1,47 @@
+{% extends 'userhome.html' %}
+
+{%  block sectioncontent %}
+<div class="row">
+
+    <div class="column large-6 tab-full">
+
+        <h3>Add Post</h3>
+        <font style="font-size:20px" color="orange">{{output}}</font>
+
+
+        <form method="post" action={{user_curl}}>
+          {% csrf_token %}
+            <div>
+                <label for="sampleInput">Your Title</label>
+                <input class="full-width" type="text" placeholder="Enter your Title" id="sampleInput" name="title">
+            </div>
+            <div>
+                <label for="sampleRecipientInput">Select category</label>
+                <div class="ss-custom-select">
+                    <select class="full-width" id="sampleRecipientInput" name="category">
+                        <option >Technical Internship</option>
+                        <option >Cultural </option>
+                        <option >Enterprenuership Ideas</option>
+                        <option >Placement</option>
+                        <option >Industrial Training</option>
+                        <option >Hackathons</option>
+                        <option >Coding Competitions</option>
+                        <option >Sports Events</option>
+                        <option >Others</option>
+
+
+                    </select>
+                </div>
+            </div>
+
+            <label for="exampleMessage">Description</label>
+            <textarea class="full-width" placeholder="Please share your experience here. Kindly give useful links too :)" id="exampleMessage" name="description"></textarea>
+
+
+
+            <input class="btn--primary full-width" type="submit" value="Submit">
+        </form>
+
+    </div>
+
+{% endblock %}

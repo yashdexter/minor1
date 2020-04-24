@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+
+{% block sectioncontent %}
+<center>
+<h1>Register Here!!!</h1>
+<font color="orange">{{output}}</font>
+<form method="post" action={{curl}}register/ >
+{% csrf_token %}
+<table>
+<tr>
+<td>Name</td> </tr>
+<tr>
+<td><input type="text" name="name" placeholder="Enter name"/></td>
+</tr>
+<tr>
+<td>email</td></tr>
+<tr>
+<td><input type="email" name="email" placeholder="Enter email"/></td>
+</tr>
+<tr>
+<td>Password</td></tr>
+<tr>
+<td><input type="password" name="password" placeholder="Enter password"/></td>
+</tr>
+
+<tr>
+<td>Enrollment Number</td></tr>
+<tr>
+<td><input type="text" name="enrollmentnumber" placeholder="Enter Enrollment number"/></td>
+</tr>
+
+<tr>
+<td>College</td></tr>
+<tr>
+<td>
+<select name="college">
+<option>Select College</option>
+<option>LNCT</option>
+<option>LNCTS</option>
+<option>LNCTE</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td>Mobile</td></tr>
+<tr>
+<td><input type="text" name="mobile" placeholder="Enter mobile number"/></td>
+</tr>
+<tr>
+<td>Address</td></tr>
+<tr>
+<td><textarea name="address" placeholder="Enter address"></textarea></td>
+</tr>
+<tr>
+<td>City</td></tr>
+<tr>
+<td>
+<select name="city">
+<option>Select City</option>
+<option>Indore</option>
+<option>Bhopal</option>
+<option>Ujjain</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>Gender</td></tr>
+<tr>
+<td>
+<input type="radio" name="gender" value="male"/>Male
+&nbsp;&nbsp;
+<input type="radio" name="gender" value="female"/> Female
+</td>
+</tr>
+<tr>
+<td><input type="submit"  value="Register" /></td>
+</tr>
+</table>
+</form>
+</center>
+{% endblock %}
+
+
+
+
+{% block footer %}
+
+{% endblock %}

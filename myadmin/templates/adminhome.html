@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block nav %}
+<div id="wrapper">
+
+	<div id="menu-wrapper">
+		<div id="menu" class="container">
+			<ul>
+				<li class="current_page_item"><a href="{{myadmin_curl}}">adminhome</a></li>
+				<li><a href="{{myadmin_curl}}manageuser/">Manage User</a></li>
+				<li><a href="{{myadmin_curl}}managepost/">Manage Post</a></li>
+
+			<li><a href={{curl}}login/>logout</a></li>
+			</ul>
+		</div>
+		<!-- end #menu -->
+	</div>
+
+{% endblock %}
+
+{% block sectioncontent %}
+<h3>Welcome to admin panel</h3>
+
+{% endblock %}
+
+{% block sectionfeatured %}
+
+{% endblock %}
+
+{% block sidesection %}
+
+{% endblock %}
+{% block number %}
+
+{% endblock %}
+
+{% block footer %}
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'userhome.html' %}
+
+{% block sectioncontent %}
+<blockquote>
+    <p>
+    For God so loved the world, that he gave his only Son, that whoever believes in
+    him should not perish but have eternal life. For God did not send his Son into
+    the world to condemn the world, but in order that the world might be
+    saved through him.
+    </p>
+    <cite>John 3:16-17 ESV</cite>
+</blockquote>
+
+
+<blockquote>
+<table height="100" class="table table-bordered">
+<tr>
+<td><b>Title : </b> {{row.title}}</td>
+</tr>
+<tr>
+<td rowspan="2"><b>Description : </b>{{row.description}}</td>
+
+
+<a style="color:blue;" href='' >Read more...</a>
+<td>
+</tr>
+</table>
+</blockquote>
+
+{% endblock %}
